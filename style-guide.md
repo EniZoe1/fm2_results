@@ -10,7 +10,7 @@ The designs were created to the following widths:
 ## Colors
 
 ### Primary
-
+<!-- 973px-1110px  -->
 - Light red: hsl(0, 100%, 67%)
 - Orangey yellow: hsl(39, 100%, 56%)
 - Green teal: hsl(166, 100%, 37%)

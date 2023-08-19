@@ -114,7 +114,6 @@ body {
 			}
 			&__score {
 				display: flex;
-				justify-content: space-between;
 				flex-shrink: 0;
 				padding: 1.8rem 1.6rem;
 				margin-bottom: 1.2rem;
@@ -138,8 +137,11 @@ body {
 					margin-bottom: 2.4rem;
 				}
 			}
-
+			&__category{
+				margin: 0 1.6rem;
+			}
 			&__result {
+				margin-left: auto;
 				color: $dark-navy;
 				font-weight: 700;
 			}
@@ -182,7 +184,7 @@ body {
 		}
 	}
 }
-@media (min-width: 975px) {
+@media (min-width: 1002px) {
 	body {
 		position: relative;
 		display: block;

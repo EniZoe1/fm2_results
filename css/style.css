@@ -143,9 +143,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   padding: 1.8rem 1.6rem;
@@ -178,7 +175,11 @@ body {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #1125d6;
   margin-bottom: 2.4rem;
 }
+.cards .card-details__category {
+  margin: 0 1.6rem;
+}
 .cards .card-details__result {
+  margin-left: auto;
   color: #303b59;
   font-weight: 700;
 }
@@ -221,7 +222,7 @@ body {
   z-index: 2;
 }
 
-@media (min-width: 975px) {
+@media (min-width: 1002px) {
   body {
     position: relative;
     display: block;
