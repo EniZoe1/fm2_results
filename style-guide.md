@@ -19,10 +19,19 @@ The designs were created to the following widths:
 ## Gradients
 
 - Light slate blue (background): hsl(252, 100%, 67%)
+	#7857ff
 - Light royal blue (background): hsl(241, 81%, 54%)
+	#2e2be9
 
 - Violet blue (circle): hsla(256, 72%, 46%, 1)
-- Persian blue (circle): hsla(241, 72%, 46%, 0)
+	#4e21ca
+- Persian blue (circle): hsla(241, 72%, 46%, 1)
+	#2421ca
+
+#7755ff
+#2f2ce9
+	#4D21C9
+	#2521C9
 
 
 
