@@ -46,6 +46,9 @@ body {
   margin: 0 auto;
   background-color: #fff;
   font-family: "Hanken Grotesk", sans-serif;
+  border-radius: 3.2rem;
+  -webkit-box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
+          box-shadow: 0px 30px 60px 0px rgba(61, 108, 236, 0.15);
 }
 .cards .card {
   display: -webkit-box;
@@ -56,7 +59,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  max-width: 375px;
   border-radius: 0rem 0rem 3.2rem 3.2rem;
 }
 .cards .card-score {
@@ -74,8 +76,8 @@ body {
   background-position: center;
 }
 .cards .card-score__title {
-  margin: 3.5rem 0;
-  font-size: 2.4rem;
+  margin: 2.4rem 0;
+  font-size: 1.8rem;
   color: #cac9ff;
   font-weight: 700;
 }
@@ -91,30 +93,30 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  height: 200px;
-  width: 200px;
+  min-height: 14rem;
+  min-width: 14rem;
   border-radius: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(#4d21c9), color-stop(100%, rgba(37, 33, 201, 0)), to(rgba(37, 33, 201, 0)));
   background: linear-gradient(180deg, #4d21c9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.4rem;
 }
 .cards .card-score__result__count {
-  font-size: 7.2rem;
+  font-size: 5.6rem;
   font-weight: 800;
-  line-height: 7.2rem;
+  line-height: 5.6rem;
 }
 .cards .card-score__result__max {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #cac9ff;
 }
 .cards .card-score__heading {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.8rem;
 }
 .cards .card-score__text {
-  padding: 0 5.4rem;
+  padding: 0 5.8rem;
   margin-bottom: 4rem;
   text-align: center;
   font-size: 1.6rem;
@@ -242,8 +244,34 @@ body {
   .cards .card {
     border-radius: 3.2rem;
   }
+  .cards .card-score__title {
+    margin: 3.5rem 0;
+    font-size: 2.4rem;
+  }
   .cards .card-score__text {
     font-size: 1.8rem;
+  }
+  .cards .card-score__result {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 2.8rem;
+  }
+  .cards .card-score__result__count {
+    font-size: 7.2rem;
+  }
+  .cards .card-score__result__max {
+    font-size: 1.8rem;
+  }
+  .cards .card-score__heading {
+    margin-bottom: 1.4rem;
+    font-size: 3.2rem;
+  }
+  .cards .card-score__text {
+    margin-bottom: 5.5rem;
+    padding: 0 5.4rem;
+  }
+  .cards .card-details {
+    padding: 3.8rem 4rem 4.6rem;
   }
   .cards .card-details__title {
     font-size: 2.4rem;
