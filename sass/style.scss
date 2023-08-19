@@ -11,6 +11,11 @@ $turquoise: #00bb8f;
 $turquoise-95-white: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #00bb8f;
 $navy-blue: #1125d6;
 $navy-blue-95-white: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #1125d6;
+$very-light-blue: #ecf2ff;
+@font-face{
+	font-family: 'Hanken Grotesk';
+	src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
 @mixin colorAndBgc($c, $bgc) {
 	color: $c;
 	background: $bgc;
@@ -26,12 +31,19 @@ $navy-blue-95-white: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(25
 html {
 	font-size: 62.5%;
 }
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $very-light-blue;
+}
 .cards {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	flex-wrap: wrap;
-	width: 100%;
+	margin: 0 auto;
+	background-color: $white;
 	font-family: "Hanken Grotesk", sans-serif;
 	.card {
 		display: flex;
@@ -111,6 +123,7 @@ html {
 				border: none;
 				background-color: $red-95-white;
 				font-size: 1.6rem;
+				font-weight: 500;
 				&:has(.card-details__category-one) {
 					@include colorAndBgc($red, $red-95-white);
 				}
@@ -141,13 +154,43 @@ html {
 				border-radius: 12.8rem;
 				background: $dark-navy;
 				color: $white;
+				font-size: 1.8rem;
 				text-align: center;
 				cursor: pointer;
 				// transition: background .3s;
-				&:hover{
+				&:hover {
 					background: $gradient1;
 				}
 			}
 		}
+	}
+}
+@media (min-width: 750px) {
+	body {
+		// position: relative;
+		// height: 100vh;
+	}
+	.cards {
+		// position: relative;
+		// top: 50%;
+		// translate: 0 -50%;
+		border-radius: 3.2rem;
+		.card {
+			border-radius: 3.2rem;
+			&-score{
+				&__text{
+					font-size: 1.8rem;
+				}
+			}
+			&-details{
+				&__title{
+					font-size: 2.4rem;
+				}
+				&__score{
+					font-size: 1.8rem;
+				}
+			}
+		}
+		
 	}
 }

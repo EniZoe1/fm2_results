@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
 *,
 *::before,
 *::after {
@@ -11,19 +15,34 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ecf2ff;
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
   font-family: "Hanken Grotesk", sans-serif;
 }
 .cards .card {
@@ -134,6 +153,7 @@ html {
   border: none;
   background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #f55;
   font-size: 1.6rem;
+  font-weight: 500;
 }
 .cards .card-details__score:has(.card-details__category-one) {
   color: #f55;
@@ -171,10 +191,29 @@ html {
   border-radius: 12.8rem;
   background: #303b59;
   color: #fff;
+  font-size: 1.8rem;
   text-align: center;
   cursor: pointer;
 }
 .cards .card-details__btn:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#75f), color-stop(0.01%, #6943ff), to(#2f2ce9));
   background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+}
+
+@media (min-width: 750px) {
+  .cards {
+    border-radius: 3.2rem;
+  }
+  .cards .card {
+    border-radius: 3.2rem;
+  }
+  .cards .card-score__text {
+    font-size: 1.8rem;
+  }
+  .cards .card-details__title {
+    font-size: 2.4rem;
+  }
+  .cards .card-details__score {
+    font-size: 1.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */
