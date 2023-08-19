@@ -185,9 +185,10 @@ body {
   opacity: 0.5;
 }
 .cards .card-details__btn {
+  position: relative;
   padding: 1.7rem 0;
   margin-bottom: 0.6rem;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 12.8rem;
   background: #303b59;
   color: #fff;
@@ -195,9 +196,27 @@ body {
   text-align: center;
   cursor: pointer;
 }
-.cards .card-details__btn:hover {
+.cards .card-details__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#75f), color-stop(0.01%, #6943ff), to(#2f2ce9));
   background: linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%);
+  border-radius: 12.8rem;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.cards .card-details__btn:hover::before {
+  opacity: 1;
+}
+.cards .card-details__btn-text {
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 750px) {

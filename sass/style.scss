@@ -12,9 +12,9 @@ $turquoise-95-white: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(25
 $navy-blue: #1125d6;
 $navy-blue-95-white: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%), #1125d6;
 $very-light-blue: #ecf2ff;
-@font-face{
-	font-family: 'Hanken Grotesk';
-	src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+@font-face {
+	font-family: "Hanken Grotesk";
+	src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
 }
 @mixin colorAndBgc($c, $bgc) {
 	color: $c;
@@ -148,18 +148,35 @@ body {
 				opacity: 0.5;
 			}
 			&__btn {
+				position: relative;
 				padding: 1.7rem 0;
 				margin-bottom: 0.6rem;
-				border: 1px solid transparent;
+				border: none;
 				border-radius: 12.8rem;
 				background: $dark-navy;
 				color: $white;
 				font-size: 1.8rem;
 				text-align: center;
 				cursor: pointer;
-				// transition: background .3s;
-				&:hover {
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
 					background: $gradient1;
+					border-radius: 12.8rem;
+					background-color: #fff;
+					opacity: 0;
+					transition: opacity .3s;
+				}
+				&:hover::before {
+					opacity: 1;
+				}
+				&-text{
+					position: relative;
+					z-index: 2;
 				}
 			}
 		}
@@ -177,20 +194,19 @@ body {
 		border-radius: 3.2rem;
 		.card {
 			border-radius: 3.2rem;
-			&-score{
-				&__text{
+			&-score {
+				&__text {
 					font-size: 1.8rem;
 				}
 			}
-			&-details{
-				&__title{
+			&-details {
+				&__title {
 					font-size: 2.4rem;
 				}
-				&__score{
+				&__score {
 					font-size: 1.8rem;
 				}
 			}
 		}
-		
 	}
 }
