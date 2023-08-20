@@ -55,6 +55,8 @@ body {
 		&-score {
 			display: flex;
 			align-items: center;
+			
+				align-self: stretch;
 			width: 100%;
 			padding: 0.3rem;
 			color: hsl(221, 100%, 96%);
@@ -117,7 +119,7 @@ body {
 				display: flex;
 				flex-shrink: 0;
 				padding: 1.8rem 1.6rem;
-				margin-bottom: 1.2rem;
+				margin-bottom: 1.6rem;
 				width: 100%;
 				border-radius: 1.6rem;
 				border: none;
@@ -137,6 +139,7 @@ body {
 					@include colorAndBgc($navy-blue, $navy-blue-95-white);
 					margin-bottom: 2.4rem;
 				}
+				
 			}
 			&__category {
 				margin: 0 1.6rem;
@@ -232,9 +235,14 @@ body {
 				padding: 3.8rem 4rem 4.6rem;
 				&__title {
 					font-size: 2.4rem;
+					margin-bottom: 2.8rem;
 				}
 				&__score {
 					font-size: 1.8rem;
+					&:has(.card-details__category-four) {
+					@include colorAndBgc($navy-blue, $navy-blue-95-white);
+					margin-bottom: 4.1rem;
+				}
 				}
 			}
 		}
