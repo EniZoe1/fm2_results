@@ -18,14 +18,28 @@
 				text-align: center;
 			}
 			.attribution a {
+				position: relative;
 				color: hsl(228, 45%, 44%);
 				text-decoration: none;
+			}
+			.attribution a::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				height: 2px;
+				width: 0%;
+				background-color: hsl(228, 45%, 44%);
+				transition: width 0.3s;
+			}
+			.attribution a:hover::before {
+				width: 100%;
+				left: 0;
 			}
 		</style>
 	</head>
 	<body>
 		<main>
-
 			<section class="cards" role="test-results">
 				<div class="card-score card">
 					<h4 class="card-score__title">Your Result</h4>
