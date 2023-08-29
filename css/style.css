@@ -263,6 +263,7 @@ body {
     font-size: 7.2rem;
   }
   .cards .card-score__result__max {
+    opacity: 0.5168;
     font-size: 1.8rem;
   }
   .cards .card-score__heading {
